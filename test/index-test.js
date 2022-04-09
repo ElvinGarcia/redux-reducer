@@ -38,11 +38,11 @@ describe('manageFriends', () => {
   it("adds the friend when type is 'ADD_FRIEND' and the action has a friend property with a name, hometown and id", () =>{
     expect(manageFriends(state, {
       type: "ADD_FRIEND",
-      friend: {
-        name: 'Joe',
-        hometown: 'Boston',
-        id: 101
-      }
+          friend: {
+            name: 'Joe',
+            hometown: 'Boston',
+            id: 101
+          }
     })).toEqual({
       friends: [
         {
@@ -81,9 +81,9 @@ describe('manageFriends', () => {
     };
 
     expect(manageFriends(state, {
-      type: "REMOVE_FRIEND",
-      id: 101
-    })).toEqual({
+        type: "REMOVE_FRIEND",
+        id: 101
+      })).toEqual({
       friends: [
         {
           name: 'Avi',
